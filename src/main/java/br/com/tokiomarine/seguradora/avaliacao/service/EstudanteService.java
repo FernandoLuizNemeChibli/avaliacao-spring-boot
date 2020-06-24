@@ -6,7 +6,7 @@ import javax.validation.Valid;
 
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 
-public interface EstudandeService {
+public interface EstudanteService {
 
 	List<Estudante> buscarEstudantes();
 

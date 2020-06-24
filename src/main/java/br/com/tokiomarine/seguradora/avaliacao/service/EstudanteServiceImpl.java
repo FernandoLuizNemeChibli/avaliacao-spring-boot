@@ -8,23 +8,22 @@ import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.repository.EstudanteRepository;
 
 // TODO Efetue a implementação dos métodos da classe service
-public class EstudanteServiceImpl implements EstudandeService {
+public class EstudanteServiceImpl implements EstudanteService {
 
 	EstudanteRepository repository;
 
 	@Override
 	public void cadastrarEstudante(@Valid Estudante estudante) {
-
+		repository.save(estudante);
 	}
 
 	@Override
 	public void atualizarEstudante(@Valid Estudante estudante) {
-
 	}
 
 	@Override
 	public List<Estudante> buscarEstudantes() {
-		return null;
+		return repository.findAll();
 	}
 
 	@Override
